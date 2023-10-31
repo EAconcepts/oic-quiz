@@ -1,4 +1,4 @@
-const domQuestions = [
+const questionDom = [
   {
     question: "What does DOM stand for?",
     options: [
@@ -21,8 +21,8 @@ const domQuestions = [
   },
   {
     question: "What is the root element of an HTML document in the DOM?",
-    options: ["<html>", "<body>", "<head>", "<document>"],
-    answer: "<html>",
+    options: ["html tag", "body tag;", "head tag;", "document tag"],
+    answer: "html tag",
   },
   {
     question:
@@ -69,27 +69,27 @@ const domQuestions = [
     options: ["addEventListener", "attachEvent", "listenEvent", "bindEvent"],
     answer: "addEventListener",
   },
-  {
-    question: "What is the purpose of the `window.onload` event in the DOM?",
-    options: [
-      "It triggers when the window is closed",
-      "It triggers when the page is loaded",
-      "It triggers when a button is clicked",
-      "It triggers when the mouse moves",
-    ],
-    answer: "It triggers when the page is loaded",
-  },
-  {
-    question:
-      "What is the purpose of the `event.preventDefault()` method in the DOM?",
-    options: [
-      "Prevents the default behavior of an event",
-      "Stops the event from firing",
-      "Cancels all event listeners",
-      "Stops the propagation of an event",
-    ],
-    answer: "Prevents the default behavior of an event",
-  },
+  // {
+  //   question: "What is the purpose of the `window.onload` event in the DOM?",
+  //   options: [
+  //     "It triggers when the window is closed",
+  //     "It triggers when the page is loaded",
+  //     "It triggers when a button is clicked",
+  //     "It triggers when the mouse moves",
+  //   ],
+  //   answer: "It triggers when the page is loaded",
+  // },
+  // {
+  //   question:
+  //     "What is the purpose of the `event.preventDefault()` method in the DOM?",
+  //   options: [
+  //     "Prevents the default behavior of an event",
+  //     "Stops the event from firing",
+  //     "Cancels all event listeners",
+  //     "Stops the propagation of an event",
+  //   ],
+  //   answer: "Prevents the default behavior of an event",
+  // },
   {
     question: "What is the purpose of the `event.target` property in the DOM?",
     options: [
@@ -100,21 +100,21 @@ const domQuestions = [
     ],
     answer: "It returns the event source element",
   },
-  {
-    question: "What method is used to make an XMLHttpRequest in the DOM?",
-    options: ["fetch()", "sendRequest()", "makeRequest()", "xhrRequest()"],
-    answer: "fetch()",
-  },
-  {
-    question: "What is the purpose of the `localStorage` object in the DOM?",
-    options: [
-      "To store data locally in the browser",
-      "To fetch data from a server",
-      "To delete data from the DOM",
-      "To store data on the server",
-    ],
-    answer: "To store data locally in the browser",
-  },
+  // {
+  //   question: "What method is used to make an XMLHttpRequest in the DOM?",
+  //   options: ["fetch()", "sendRequest()", "makeRequest()", "xhrRequest()"],
+  //   answer: "fetch()",
+  // },
+  // {
+  //   question: "What is the purpose of the `localStorage` object in the DOM?",
+  //   options: [
+  //     "To store data locally in the browser",
+  //     "To fetch data from a server",
+  //     "To delete data from the DOM",
+  //     "To store data on the server",
+  //   ],
+  //   answer: "To store data locally in the browser",
+  // },
   {
     question:
       "What is the purpose of the `getElementByTagName` method in the DOM?",
@@ -126,16 +126,16 @@ const domQuestions = [
     ],
     answer: "It selects elements by their tag name",
   },
-  {
-    question: "What is the purpose of the `window.location` object in the DOM?",
-    options: [
-      "It represents the current browser's location",
-      "It represents the page's content",
-      "It represents the window size",
-      "It represents the DOM structure",
-    ],
-    answer: "It represents the current browser's location",
-  },
+  // {
+  //   question: "What is the purpose of the `window.location` object in the DOM?",
+  //   options: [
+  //     "It represents the current browser's location",
+  //     "It represents the page's content",
+  //     "It represents the window size",
+  //     "It represents the DOM structure",
+  //   ],
+  //   answer: "It represents the current browser's location",
+  // },
   {
     question:
       "What is the purpose of the `document.title` property in the DOM?",
@@ -147,20 +147,20 @@ const domQuestions = [
     ],
     answer: "It sets the document's title displayed in the browser tab",
   },
-  {
-    question:
-      "Which method is used to check if an element has a specific CSS class in the DOM?",
-    options: ["hasClass", "containsClass", "checkClass", "hasCSSClass"],
-    answer: "hasClass",
-  },
-  {
-    question: "What does the term 'DOM traversal' refer to in JavaScript?",
-    options: [
-      "Navigating through the DOM tree to find elements",
-      "Modifying the document's structure",
-      "Changing the document's colors",
-      "Styling elements with CSS",
-    ],
-    answer: "Navigating through the DOM tree to find elements",
-  },
+  // {
+  //   question:
+  //     "Which method is used to check if an element has a specific CSS class in the DOM?",
+  //   options: ["hasClass", "containsClass", "checkClass", "hasCSSClass"],
+  //   answer: "hasClass",
+  // },
+  // {
+  //   question: "What does the term 'DOM traversal' refer to in JavaScript?",
+  //   options: [
+  //     "Navigating through the DOM tree to find elements",
+  //     "Modifying the document's structure",
+  //     "Changing the document's colors",
+  //     "Styling elements with CSS",
+  //   ],
+  //   answer: "Navigating through the DOM tree to find elements",
+  // },
 ];
