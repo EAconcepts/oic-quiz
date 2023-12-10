@@ -74,7 +74,7 @@ let timeValue = 30;
 const nextBtn = document.querySelector('.next-btn');
 
 nextBtn.onclick = () => {
-    if (questionCount < questionDom.length - 1) {
+    if (questionCount < questionHtml.length - 1) {
         questionCount++;
          showQuestions(questionCount);
 
@@ -91,16 +91,16 @@ nextBtn.onclick = () => {
 }
 
 const optionList = document.querySelector('.option-list');
-// console.log(questionDom)
-// getting questionDom and options from array
+// console.log(questionHtml)
+// getting questionHtml and options from array
 function showQuestions(index) {
     const questionText = document.querySelector('.question-text');
-    questionText.textContent = ` ${questionDom[index].question}`;
+    questionText.textContent = ` ${questionHtml[index].question}`;
     
-    let optionTag = `<div class="option"><span>${questionDom[index].options[0]}</span></div>
-                     <div class="option"><span>${questionDom[index].options[1]}</span></div>
-                     <div class="option"><span>${questionDom[index].options[2]}</span></div>
-                     <div class="option"><span>${questionDom[index].options[3]}</span></div>`;
+    let optionTag = `<div class="option"><span>${questionHtml[index].options[0]}</span></div>
+                     <div class="option"><span>${questionHtml[index].options[1]}</span></div>
+                     <div class="option"><span>${questionHtml[index].options[2]}</span></div>
+                     <div class="option"><span>${questionHtml[index].options[3]}</span></div>`;
 
     optionList.innerHTML = optionTag;
 
@@ -113,7 +113,7 @@ function showQuestions(index) {
 function optionSelected(answer) {
     clearInterval(counter);
     let userAnswer = answer.textContent;
-    let correctAnswer = questionDom[questionCount].answer;
+    let correctAnswer = questionHtml[questionCount].answer;
     let allOptions = optionList.children.length;
 
     if (userAnswer == correctAnswer) {
@@ -152,12 +152,12 @@ function startTimer(time) {
 
 function questionCounter(index) {
     const questionTotal = document.querySelector('.question-total');
-    questionTotal.textContent = `${index} of ${questionDom.length} Questions`;
+    questionTotal.textContent = `${index} of ${questionHtml.length} Questions`;
 }
 
 function headerScore() {
     const headerScoreText = document.querySelector('.header-score');
-    headerScoreText.textContent = `Score: ${userScore} / ${questionDom.length}`;
+    headerScoreText.textContent = `Score: ${userScore} / ${questionHtml.length}`;
 }
 
 function showResultBox() {
@@ -165,12 +165,12 @@ function showResultBox() {
     resultBox.classList.add('active');
 
     const scoreText = document.querySelector('.score-text');
-    scoreText.textContent = `Your Score ${userScore} out of ${questionDom.length}`;
+    scoreText.textContent = `Your Score ${userScore} out of ${questionHtml.length}`;
 
     const circularProgress = document.querySelector('.circular-progress');
     const progressValue = document.querySelector('.progress-value');
     let progressStartValue = -1;
-let progressEndValue = (userScore / questionDom.length) * 100;
+let progressEndValue = (userScore / questionHtml.length) * 100;
 let speed = 20;
 
 // Ensure the progressEndValue doesn't exceed 100%
@@ -182,7 +182,7 @@ let progress = setInterval(() => {
     // Cap progressStartValue at progressEndValue
     progressStartValue = Math.min(progressStartValue, progressEndValue);
     
-    progressValue.textContent = `${progressStartValue}%`;
+    progressValue.textContent = `${progressStartValue.toFixed(2)}%`;
     circularProgress.style.background = `conic-gradient(aqua ${progressStartValue * 3.6}deg, rgba(255, 255, 255, .1) 0deg)`;
 
     if (progressStartValue >= progressEndValue) {
