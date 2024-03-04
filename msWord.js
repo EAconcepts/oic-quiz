@@ -1,9 +1,9 @@
 const msWord = [
   {
     question:
-      "Which menu option in Microsoft Word allows you to change the font style and size?",
-    options: ["Format", "View", "Edit", "Insert"],
-    answer: "Format",
+      "Which keyboard shortcut is used to close the currently opened document in Microsoft Word?",
+    options: ["Ctrl + C", "Alt + F4", "Ctrl + W", "Ctrl + X"],
+    answer: "Ctrl + W",
   },
   {
     question:
