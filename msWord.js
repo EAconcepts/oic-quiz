@@ -11,12 +11,12 @@ const msWord = [
     options: ["Ctrl + U", "Ctrl + Z", "Ctrl + A", "Ctrl + Y"],
     answer: "Ctrl + Z",
   },
-  {
-    question:
-      "Which feature in Microsoft Word allows you to quickly insert frequently used text?",
-    options: ["AutoFormat", "Quick Parts", "Format Painter", "WordArt"],
-    answer: "Quick Parts",
-  },
+  // {
+  //   question:
+  //     "Which feature in Microsoft Word allows you to quickly insert frequently used text?",
+  //   options: ["AutoFormat", "Quick Parts", "Format Painter", "WordArt"],
+  //   answer: "Quick Parts",
+  // },
   {
     question:
       "What is the default file extension for a Microsoft Word document?",

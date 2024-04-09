@@ -72,7 +72,7 @@ let timeValue = 30;
 const nextBtn = document.querySelector(".next-btn");
 
 nextBtn.onclick = () => {
-  if (questionCount < msExcel.length - 1) {
+  if (questionCount < msWord.length - 1) {
     questionCount++;
     showQuestions(questionCount);
 
@@ -89,15 +89,15 @@ nextBtn.onclick = () => {
 
 const optionList = document.querySelector(".option-list");
 
-// getting msExcel and options from array
+// getting msWord and options from array
 function showQuestions(index) {
   const questionText = document.querySelector(".question-text");
-  questionText.textContent = ` ${msExcel[index].question}`;
+  questionText.textContent = ` ${msWord[index].question}`;
 
-  let optionTag = `<div class="option"><span>${msExcel[index].options[0]}</span></div>
-                     <div class="option"><span>${msExcel[index].options[1]}</span></div>
-                     <div class="option"><span>${msExcel[index].options[2]}</span></div>
-                     <div class="option"><span>${msExcel[index].options[3]}</span></div>
+  let optionTag = `<div class="option"><span>${msWord[index].options[0]}</span></div>
+                     <div class="option"><span>${msWord[index].options[1]}</span></div>
+                     <div class="option"><span>${msWord[index].options[2]}</span></div>
+                     <div class="option"><span>${msWord[index].options[3]}</span></div>
                      `;
 
   optionList.innerHTML = optionTag;
@@ -111,7 +111,7 @@ function showQuestions(index) {
 function optionSelected(answer) {
   clearInterval(counter);
   let userAnswer = answer.textContent;
-  let correctAnswer = msExcel[questionCount].answer;
+  let correctAnswer = msWord[questionCount].answer;
   let allOptions = optionList.children.length;
 
   if (userAnswer == correctAnswer) {
@@ -156,12 +156,12 @@ function startTimer(time) {
 
 function questionCounter(index) {
   const questionTotal = document.querySelector(".question-total");
-  questionTotal.textContent = `${index} of ${msExcel.length} Questions`;
+  questionTotal.textContent = `${index} of ${msWord.length} Questions`;
 }
 
 function headerScore() {
   const headerScoreText = document.querySelector(".header-score");
-  headerScoreText.textContent = `Score: ${userScore} / ${msExcel.length}`;
+  headerScoreText.textContent = `Score: ${userScore} / ${msWord.length}`;
 }
 
 function showResultBox() {
@@ -169,12 +169,12 @@ function showResultBox() {
   resultBox.classList.add("active");
 
   const scoreText = document.querySelector(".score-text");
-  scoreText.textContent = `Your Score ${userScore} out of ${msExcel.length}`;
+  scoreText.textContent = `Your Score ${userScore} out of ${msWord.length}`;
 
   const circularProgress = document.querySelector(".circular-progress");
   const progressValue = document.querySelector(".progress-value");
   let progressStartValue = -1;
-  let progressEndValue = (userScore / msExcel.length) * 100;
+  let progressEndValue = (userScore / msWord.length) * 100;
   let speed = 20;
 
   // Ensure the progressEndValue doesn't exceed 100%
