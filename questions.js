@@ -39,18 +39,18 @@ let questions = [
       "D. toString()",
     ],
   },
-  {
-    numb: 5,
-    question: "Which of the following is not true about .every() array method?",
-    answer:
-      "C. returns false if one of the array elements fails the function test",
-    options: [
-      "A. returns true if one of the array elements passes the function test",
-      "B. returns true if all of the array element fails the function test",
-      "C. returns false if one of the array element fails the function test ",
-      "D. returns the all the elements of the array ",
-    ],
-  },
+  // {
+  //   numb: 5,
+  //   question: "Which of the following is not true about .every() array method?",
+  //   answer:
+  //     "C. returns false if one of the array elements fails the function test",
+  //   options: [
+  //     "A. returns true if one of the array elements passes the function test",
+  //     "B. returns true if all of the array element fails the function test",
+  //     "C. returns false if one of the array element fails the function test ",
+  //     "D. returns the all the elements of the array ",
+  //   ],
+  // },
   {
     numb: 6,
     question: "Which of the following Date() method is not ideal to use.",
