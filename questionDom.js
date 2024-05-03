@@ -69,6 +69,29 @@ const questionDom = [
     options: ["addEventListener", "attachEvent", "listenEvent", "bindEvent"],
     answer: "addEventListener",
   },
+  {
+    numb: 4,
+    question: "4. How do you add an item to an array in JavaScript?",
+    options: [
+      "array.addItem(item)",
+      "array.push(item)",
+      "array.insert(item)",
+      "array.append(item)",
+    ],
+    answer: "array.push(item)",
+  },
+  {
+    numb: 5,
+    question:
+      "5. Which method removes the last element from an array in JavaScript?",
+    options: [
+      "array.removeLast()",
+      "array.pop()",
+      "array.deleteLast()",
+      "array.splice()",
+    ],
+    answer: "array.pop()",
+  },
   // {
   //   question: "What is the purpose of the `window.onload` event in the DOM?",
   //   options: [
@@ -105,27 +128,27 @@ const questionDom = [
   //   options: ["fetch()", "sendRequest()", "makeRequest()", "xhrRequest()"],
   //   answer: "fetch()",
   // },
-  // {
-  //   question: "What is the purpose of the `localStorage` object in the DOM?",
-  //   options: [
-  //     "To store data locally in the browser",
-  //     "To fetch data from a server",
-  //     "To delete data from the DOM",
-  //     "To store data on the server",
-  //   ],
-  //   answer: "To store data locally in the browser",
-  // },
   {
-    question:
-      "What is the purpose of the `getElementByTagName` method in the DOM?",
+    question: "What is the purpose of the `localStorage` object in the DOM?",
     options: [
-      "It selects elements by their class name",
-      "It selects elements by their ID",
-      "It selects elements by their tag name",
-      "It selects elements by their attribute",
+      "To store data locally in the browser",
+      "To fetch data from a server",
+      "To delete data from the DOM",
+      "To store data on the server",
     ],
-    answer: "It selects elements by their tag name",
+    answer: "To store data locally in the browser",
   },
+  // {
+  //   question:
+  //     "What is the purpose of the `getElementByTagName` method in the DOM?",
+  //   options: [
+  //     "It selects elements by their class name",
+  //     "It selects elements by their ID",
+  //     "It selects elements by their tag name",
+  //     "It selects elements by their attribute",
+  //   ],
+  //   answer: "It selects elements by their tag name",
+  // },
   // {
   //   question: "What is the purpose of the `window.location` object in the DOM?",
   //   options: [
