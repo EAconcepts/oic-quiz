@@ -72,7 +72,7 @@ let timeValue = 30;
 const nextBtn = document.querySelector(".next-btn");
 
 nextBtn.onclick = () => {
-  if (questionCount < powerpoint_questionss.length - 1) {
+  if (questionCount < powerpoint_questions.length - 1) {
     questionCount++;
     showQuestions(questionCount);
 
@@ -89,15 +89,15 @@ nextBtn.onclick = () => {
 
 const optionList = document.querySelector(".option-list");
 
-// getting powerpoint_questionss and options from array
+// getting powerpoint_questions and options from array
 function showQuestions(index) {
   const questionText = document.querySelector(".question-text");
-  questionText.textContent = ` ${powerpoint_questionss[index].question}`;
+  questionText.textContent = ` ${powerpoint_questions[index].question}`;
 
-  let optionTag = `<div class="option"><span>${powerpoint_questionss[index].options[0]}</span></div>
-                     <div class="option"><span>${powerpoint_questionss[index].options[1]}</span></div>
-                     <div class="option"><span>${powerpoint_questionss[index].options[2]}</span></div>
-                     <div class="option"><span>${powerpoint_questionss[index].options[3]}</span></div>
+  let optionTag = `<div class="option"><span>${powerpoint_questions[index].options[0]}</span></div>
+                     <div class="option"><span>${powerpoint_questions[index].options[1]}</span></div>
+                     <div class="option"><span>${powerpoint_questions[index].options[2]}</span></div>
+                     <div class="option"><span>${powerpoint_questions[index].options[3]}</span></div>
                      `;
 
   optionList.innerHTML = optionTag;
@@ -111,7 +111,7 @@ function showQuestions(index) {
 function optionSelected(answer) {
   clearInterval(counter);
   let userAnswer = answer.textContent;
-  let correctAnswer = powerpoint_questionss[questionCount].answer;
+  let correctAnswer = powerpoint_questions[questionCount].answer;
   let allOptions = optionList.children.length;
 
   if (userAnswer == correctAnswer) {
@@ -156,12 +156,12 @@ function startTimer(time) {
 
 function questionCounter(index) {
   const questionTotal = document.querySelector(".question-total");
-  questionTotal.textContent = `${index} of ${powerpoint_questionss.length} Questions`;
+  questionTotal.textContent = `${index} of ${powerpoint_questions.length} Questions`;
 }
 
 function headerScore() {
   const headerScoreText = document.querySelector(".header-score");
-  headerScoreText.textContent = `Score: ${userScore} / ${powerpoint_questionss.length}`;
+  headerScoreText.textContent = `Score: ${userScore} / ${powerpoint_questions.length}`;
 }
 
 function showResultBox() {
@@ -169,12 +169,12 @@ function showResultBox() {
   resultBox.classList.add("active");
 
   const scoreText = document.querySelector(".score-text");
-  scoreText.textContent = `Your Score ${userScore} out of ${powerpoint_questionss.length}`;
+  scoreText.textContent = `Your Score ${userScore} out of ${powerpoint_questions.length}`;
 
   const circularProgress = document.querySelector(".circular-progress");
   const progressValue = document.querySelector(".progress-value");
   let progressStartValue = -1;
-  let progressEndValue = (userScore / powerpoint_questionss.length) * 100;
+  let progressEndValue = (userScore / powerpoint_questions.length) * 100;
   let speed = 20;
 
   // Ensure the progressEndValue doesn't exceed 100%
