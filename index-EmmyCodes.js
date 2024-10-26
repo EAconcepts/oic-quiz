@@ -72,7 +72,7 @@ let timeValue = 30;
 const nextBtn = document.querySelector(".next-btn");
 
 nextBtn.onclick = () => {
-  if (questionCount < digitalLiteracy.length - 1) {
+  if (questionCount < internet.length - 1) {
     questionCount++;
     showQuestions(questionCount);
 
@@ -89,15 +89,15 @@ nextBtn.onclick = () => {
 
 const optionList = document.querySelector(".option-list");
 
-// getting digitalLiteracy and options from array
+// getting internet and options from array
 function showQuestions(index) {
   const questionText = document.querySelector(".question-text");
-  questionText.textContent = ` ${digitalLiteracy[index].question}`;
+  questionText.textContent = ` ${internet[index].question}`;
 
-  let optionTag = `<div class="option"><span>${digitalLiteracy[index].options[0]}</span></div>
-                     <div class="option"><span>${digitalLiteracy[index].options[1]}</span></div>
-                     <div class="option"><span>${digitalLiteracy[index].options[2]}</span></div>
-                     <div class="option"><span>${digitalLiteracy[index].options[3]}</span></div>
+  let optionTag = `<div class="option"><span>${internet[index].options[0]}</span></div>
+                     <div class="option"><span>${internet[index].options[1]}</span></div>
+                     <div class="option"><span>${internet[index].options[2]}</span></div>
+                     <div class="option"><span>${internet[index].options[3]}</span></div>
                      `;
 
   optionList.innerHTML = optionTag;
@@ -111,7 +111,7 @@ function showQuestions(index) {
 function optionSelected(answer) {
   clearInterval(counter);
   let userAnswer = answer.textContent;
-  let correctAnswer = digitalLiteracy[questionCount].answer;
+  let correctAnswer = internet[questionCount].answer;
   let allOptions = optionList.children.length;
 
   if (userAnswer == correctAnswer) {
@@ -156,12 +156,12 @@ function startTimer(time) {
 
 function questionCounter(index) {
   const questionTotal = document.querySelector(".question-total");
-  questionTotal.textContent = `${index} of ${digitalLiteracy.length} Questions`;
+  questionTotal.textContent = `${index} of ${internet.length} Questions`;
 }
 
 function headerScore() {
   const headerScoreText = document.querySelector(".header-score");
-  headerScoreText.textContent = `Score: ${userScore} / ${digitalLiteracy.length}`;
+  headerScoreText.textContent = `Score: ${userScore} / ${internet.length}`;
 }
 
 function showResultBox() {
@@ -169,12 +169,12 @@ function showResultBox() {
   resultBox.classList.add("active");
 
   const scoreText = document.querySelector(".score-text");
-  scoreText.textContent = `Your Score ${userScore} out of ${digitalLiteracy.length}`;
+  scoreText.textContent = `Your Score ${userScore} out of ${internet.length}`;
 
   const circularProgress = document.querySelector(".circular-progress");
   const progressValue = document.querySelector(".progress-value");
   let progressStartValue = -1;
-  let progressEndValue = (userScore / digitalLiteracy.length) * 100;
+  let progressEndValue = (userScore / internet.length) * 100;
   let speed = 20;
 
   // Ensure the progressEndValue doesn't exceed 100%
