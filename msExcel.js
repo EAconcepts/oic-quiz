@@ -99,7 +99,7 @@ const msExcel = [
     options: [
       "Go to the Review tab > Protect Sheet",
       "Go to the Home tab > Lock Sheet",
-      "Right-click on the worksheet tab and select Protect",
+      "None of the above",
     ],
     answer: "Go to the Review tab > Protect Sheet",
   },
